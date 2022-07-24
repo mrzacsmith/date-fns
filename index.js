@@ -7,8 +7,8 @@ import {
   previousFriday,
 } from 'date-fns'
 
-const today = format(new Date(2022, 3, 4), 'yyyy-MM-dd')
-console.log(today)
+const dateTest = format(new Date(2022, 3, 4), 'yyyy-MM-dd')
+console.log(dateTest)
 
 const dates = [
   new Date(1990, 3, 4),
