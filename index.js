@@ -1,14 +1,15 @@
 import {
-  compareAsc,
   format,
   addWeeks,
   isMonday,
   isFriday,
   previousFriday,
+  endOfDay,
+  subHours,
 } from 'date-fns'
 
-const dateTest = format(new Date(2022, 3, 4), 'yyyy-MM-dd')
-console.log(dateTest)
+// const dateTest = format(new Date(2022, 5, 6), 'MM-dd-yyyy')
+// console.log('date ->', dateTest)
 
 const dates = [
   new Date(1990, 3, 4),
@@ -31,3 +32,6 @@ console.log(
   )}\n`
 )
 console.log(`RENDER DATES: ${startF} -  ${endF}`)
+const endOfShift = endOfDay(start)
+const endOfShiftDay = subHours(endOfShift, 8)
+console.log(format(endOfShiftDay, 'MM/dd/yyyy  hh:mm'))
